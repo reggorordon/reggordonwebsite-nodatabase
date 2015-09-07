@@ -1,7 +1,26 @@
+      <div class="container "> 
+        <div class="carousel-inner">
+      <div class="caption1">
+         <%=link_to about_path, class: 'navbar-brand' do %>
+          <h1><strong>200 images</strong>
+          <div class="circle">enter</div>
+        by Reg Gordon</h1>
+        <% end %>
+          
+      </div>
+      
+      
+  <!-- Wrapper for slides -->
 
-<div class="container">
-    <div class="col-md-12">
-<h1>This is text</h1>
-</div>
+    
+    <div class="item active">
+        <!-- chooses random image from images directory-->
+      <%=image_tag Dir.new(Rails.root.to_s + "/app/assets/images").to_a.select{|f|    f.downcase.match(/\.jpg|\.jpeg|\.png/) }.sample %>
+
+    </div>
+
   </div>
+  
+  </div>
+ 
  
